@@ -17,9 +17,9 @@ Antes de descargar una distribución hay que comprobar que su versión sirve par
 | Versión elegida y fecha de lanzamiento | Rocky Linux 9.9, lanzada el 18/11/2026 | https://rockylinux.org/download |
 | Hasta cuándo recibe actualizaciones de seguridad | Soporte activo hasta el 31/05/2027 y actualizaciones de seguridad (EOL) hasta el 31/05/2032 | https://docs.rockylinux.org/9/releases/ |
 | Requisitos de hardware y si funciona en VirtualBox | Mínimo 1 CPU de 64 bits (arquitectura x86_64-v2 a 1.1 GHz), 1.5 GB de RAM (2 GB recomendados) y 10 GB de disco (20 GB recomendados). Sí funciona en VirtualBox (configurada con 2 GB de RAM y 2 CPU) | https://docs.rockylinux.org/9/guides/minimum_hardware_requirements/ |
-| ¿El instalador permite particionado manual? | Sí. El instalador (Anaconda) tiene la opción «Personalizada» (*Custom*) en Destino de la instalación | https://docs.rockylinux.org/10/guides/installation/ |
+| ¿El instalador permite particionado manual? | Sí. El instalador (Anaconda) tiene la opción «Personalizada» (*Custom*) en Destino de la instalación | https://docs.rockylinux.org/9/guides/installation/ |
 | Guía oficial para instalar Docker Engine en esa familia | Docker no tiene una página propia para Rocky Linux. Usamos la guía oficial de la familia CentOS/RHEL y lo dejamos documentado | https://docs.docker.com/engine/install/centos/ |
-| Imagen base del Dockerfile para esa versión | La imagen oficial existe en Docker Hub con las etiquetas de la serie 10 | https://hub.docker.com/_/rockylinux |
+| Imagen base del Dockerfile para esa versión | La imagen oficial existe en Docker Hub con las etiquetas de la serie 9 | https://hub.docker.com/_/rockylinux |
 
 ---
 
