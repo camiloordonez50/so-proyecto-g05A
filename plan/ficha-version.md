@@ -1,42 +1,51 @@
 # Ficha de verificación de versión · Grupo 05A
 
----
+## ¿Qué es esta ficha?
 
-## Rocky Linux (VM de consola)
+Antes de descargar una distribución hay que comprobar que su versión sirve para el proyecto. Esta ficha es la prueba de que lo comprobamos para cada distribución del grupo (consola, gráfica e imagen base del Dockerfile), respaldada con los enlaces oficiales verificados el día de su diligenciamiento.
 
-| Pregunta | Respuesta | Enlace donde lo comprobamos |
-| --- | --- | --- |
-| Versión elegida y fecha de lanzamiento | Rocky Linux 9.9, lanzada el 18/11/2026 | [rockylinux.org/download](https://rockylinux.org/download) |
-| Hasta cuándo recibe actualizaciones de seguridad | Soporte activo hasta el 31/05/2027 y actualizaciones de seguridad (EOL) hasta el 31/05/2032 | [docs.rockylinux.org/9/releases](https://docs.rockylinux.org/9/releases/) |
-| Requisitos de hardware y si funciona en VirtualBox | Mínimo 1 CPU de 64 bits (arquitectura x86_64-v2 a 1.1 GHz), 1.5 GB de RAM (2 GB recomendados) y 10 GB de disco (20 GB recomendados). Sí funciona en VirtualBox (configurada con 2 GB de RAM y 2 CPU) | [docs.rockylinux.org/.../minimum_hardware_requirements](https://docs.rockylinux.org/9/guides/minimum_hardware_requirements/) |
-| ¿El instalador permite particionado manual? | Sí. El instalador (Anaconda) tiene la opción «Personalizada» (*Custom*) en Destino de la instalación | [docs.rockylinux.org/9/guides/installation](https://docs.rockylinux.org/9/guides/installation/) |
-| Guía oficial para instalar Docker Engine en esa familia | Docker no tiene una página propia para Rocky Linux. Usamos la guía oficial de la familia CentOS/RHEL y lo dejamos documentado | [docs.docker.com/engine/install/centos](https://docs.docker.com/engine/install/centos/) |
-| Imagen base del Dockerfile para esa versión | La imagen oficial existe en Docker Hub con las etiquetas de la serie 9 | [hub.docker.com/_/rockylinux](https://hub.docker.com/_/rockylinux) |
+* **Distribución de consola (VM):** Fedora Server
+* **Distribución gráfica (VM):** Zorin OS
+* **Imagen base (Dockerfile):** Ubuntu
 
 ---
 
-## Xubuntu (VM gráfica)
+## Fedora Server (VM de consola)
 
 | Pregunta | Respuesta | Enlace donde lo comprobamos |
-| --- | --- | --- |
-| Versión elegida y fecha de lanzamiento | Xubuntu 26.04 LTS, lanzada el 23/04/2026 | [xubuntu.org/download](https://xubuntu.org/download/) |
-| Hasta cuándo recibe actualizaciones de seguridad | Recibe actualizaciones de seguridad durante 3 años hasta el 29/04/2029 | [xubuntu.org/release](https://xubuntu.org/release/) |
-| Requisitos de hardware y si funciona en VirtualBox | Mínimo 1 GB de RAM (2 GB recomendados), procesador de doble núcleo de 64 bits (1.5 GHz) y 8.6 GB de disco (20 GB recomendados). Sí funciona en VirtualBox | [docs.xubuntu.org/.../installation.html](https://docs.xubuntu.org/current/user/C/installation.html) |
-| ¿El instalador permite particionado manual? | Sí. En el tipo de instalación del instalador gráfico se selecciona la opción «Más opciones» (*Something else* / particionado manual) | [docs.xubuntu.org/.../installation.html](https://docs.xubuntu.org/current/user/C/installation.html) |
-| Guía oficial para instalar Docker Engine en esa familia | Docker no tiene una página exclusiva para Xubuntu. Al ser una variante oficial de Ubuntu, usamos la guía oficial de Ubuntu y lo dejamos documentado | [docs.docker.com/engine/install/ubuntu](https://docs.docker.com/engine/install/ubuntu/) |
-| Imagen base del Dockerfile para esa versión | No existe imagen oficial exclusiva de Xubuntu en Docker Hub; en su lugar se utiliza la imagen oficial de Ubuntu con la etiqueta 26.04 | [hub.docker.com/_/ubuntu](https://hub.docker.com/_/ubuntu) |
-
-- **RAM asignada a la VM y por qué:** Se asignaron 2 GB de RAM (superando el mínimo de 1 GB exigido) para garantizar fluidez en el entorno de escritorio XFCE y evitar bloqueos al ejecutar el navegador y herramientas de desarrollo simultáneamente.
+|---|---|---|
+| Versión elegida y fecha de lanzamiento | Fedora Server 44, lanzada el 21/04/2026 | https://fedoraproject.org/server/download |
+| Hasta cuándo recibe actualizaciones de seguridad | Recibe actualizaciones durante aproximadamente 13 meses, hasta el 19/05/2027 | https://docs.fedoraproject.org/en-US/releases/lifecycle/ |
+| Requisitos de hardware y si funciona en VirtualBox | Mínimo 2 CPU de 64 bits (2 GHz), 2 GB de RAM y 15 GB de disco (20 GB recomendados). Sí funciona en VirtualBox (configurada con 2 GB de RAM y 2 CPU) | https://docs.fedoraproject.org/en-US/fedora/latest/release-notes/ |
+| ¿El instalador permite particionado manual? | Sí. El instalador (Anaconda) tiene la opción «Personalizada» (*Custom*) en Destino de la instalación | https://docs.fedoraproject.org/en-US/fedora/latest/install-guide/ |
+| Guía oficial para instalar Docker Engine en esa familia | Sí. Docker cuenta con una guía oficial directa para Fedora usando el gestor de paquetes `dnf` | https://docs.docker.com/engine/install/fedora/ |
+| Imagen base del Dockerfile para esa versión | Sí, la imagen oficial existe en Docker Hub con la etiqueta `fedora:44` | https://hub.docker.com/_/fedora |
 
 ---
 
-## Alpine (imagen base del Dockerfile)
+## Zorin OS (VM gráfica)
 
 | Pregunta | Respuesta | Enlace donde lo comprobamos |
-| --- | --- | --- |
-| Versión elegida y fecha de lanzamiento | Alpine Linux 3.24.0, lanzada el 28/05/2026 | [alpinelinux.org/downloads](https://alpinelinux.org/downloads/) |
-| Hasta cuándo recibe actualizaciones de seguridad | Recibe actualizaciones de seguridad durante 2 años hasta el 01/05/2028 | [alpinelinux.org/releases](https://alpinelinux.org/releases/) |
-| Requisitos de hardware y si funciona en VirtualBox | No aplica instalación en VirtualBox porque se utiliza únicamente como imagen base de contenedor (requiere ~130 MB de disco y mínimo 128 MB de RAM en ejecución) | [alpinelinux.org/about](https://alpinelinux.org/about/) |
-| ¿El instalador permite particionado manual? | No aplica en este proyecto porque no se instala desde ISO en una VM, sino que se descarga como imagen base desde Docker Hub | [hub.docker.com/_/alpine](https://hub.docker.com/_/alpine) |
-| Guía oficial para instalar Docker Engine en esa familia | No aplica, ya que Alpine actúa como imagen base dentro del contenedor y no como sistema anfitrión donde se instala Docker Engine | [docs.docker.com/engine/install](https://docs.docker.com/engine/install/) |
+|---|---|---|
+| Versión elegida y fecha de lanzamiento | Zorin OS 17.3 Core, lanzada el 26/03/2025 | https://zorin.com/os/download/ |
+| Hasta cuándo recibe actualizaciones de seguridad | Recibe actualizaciones de software y parches de seguridad hasta el 30/04/2027 | https://help.zorin.com/docs/getting-started/getting-zorin-os/ |
+| Requisitos de hardware y si funciona en VirtualBox | Mínimo CPU de doble núcleo de 64 bits a 1 GHz, 1.5 GB de RAM (2 GB recomendados) y 15 GB de disco (20 GB recomendados). Sí funciona en VirtualBox | https://help.zorin.com/docs/getting-started/system-requirements/ |
+| ¿El instalador permite particionado manual? | Sí. En la pantalla «Tipo de instalación» del instalador gráfico se selecciona la opción «Más opciones» (*Something else*) para configurar particiones manualmente | https://help.zorin.com/docs/getting-started/install-zorin-os/ |
+| Guía oficial para instalar Docker Engine en esa familia | Docker no tiene una página exclusiva para Zorin OS. Al estar basado en Ubuntu, usamos la guía oficial de Ubuntu y lo dejamos documentado | https://docs.docker.com/engine/install/ubuntu/ |
+| Imagen base del Dockerfile para esa versión | No existe imagen oficial exclusiva de Zorin OS en Docker Hub; en su lugar se utiliza la imagen oficial de Ubuntu con la etiqueta correspondiente (`ubuntu:22.04` / `ubuntu:24.04`) | https://hub.docker.com/_/ubuntu |
+
+* **RAM asignada a la VM y por qué:** Se asignaron 4 GB de RAM (superando el mínimo de 2 GB exigido) para garantizar fluidez en el entorno de escritorio de Zorin OS y evitar bloqueos al ejecutar el navegador y herramientas de desarrollo simultáneamente.
+
+---
+
+## Ubuntu (imagen base del Dockerfile)
+
+| Pregunta | Respuesta | Enlace donde lo comprobamos |
+|---|---|---|
+| Versión elegida y fecha de lanzamiento | Ubuntu 24.04 LTS, lanzada el 25/04/2024 | https://ubuntu.com/download/server |
+| Hasta cuándo recibe actualizaciones de seguridad | Recibe actualizaciones de seguridad estándar durante 5 años hasta el 31/05/2029 | https://ubuntu.com/about/release-cycle |
+| Requisitos de hardware y si funciona en VirtualBox | No aplica instalación en VirtualBox porque se utiliza únicamente como imagen base de contenedor (requiere ~30 MB de disco comprimida y mínimo 128 MB de RAM en ejecución) | https://hub.docker.com/_/ubuntu |
+| ¿El instalador permite particionado manual? | No aplica en este proyecto porque no se instala desde ISO en una VM, sino que se descarga como imagen base desde Docker Hub | https://hub.docker.com/_/ubuntu |
+| Guía oficial para instalar Docker Engine en esa familia | No aplica, ya que Ubuntu actúa como imagen base dentro del contenedor y no como sistema anfitrión donde se instala Docker Engine | https://docs.docker.com/engine/install/ubuntu/ |
+| Imagen base del Dockerfile para esa versión | Sí, la imagen oficial existe en Docker Hub con la etiqueta `ubuntu:24.04` y utiliza `apt` como gestor de paquetes en el Dockerfile | https://hub.docker.com/_/ubuntu |
 | Imagen base del Dockerfile para esa versión | Sí, la imagen oficial existe en Docker Hub con la etiqueta `alpine:3.24` y utiliza `apk` como gestor de paquetes en el Dockerfile | [hub.docker.com/_/alpine](https://hub.docker.com/_/alpine) |
