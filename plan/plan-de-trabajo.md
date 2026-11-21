@@ -12,7 +12,7 @@ Dice quién hace qué. El docente lo usa en dos momentos: para revisar los commi
 | Yur | Máquinas virtuales y red | Instala las dos VMs con particionado manual, configura la red, SSH y las instantáneas | sprint-1.md, carpeta capturas-vm/ |
 | Camilo y Yur | Docker, scripts y sitio web | Escribe los dos scripts, el Dockerfile y el YAML de Kubernetes, y los videos | scripts/, docker/, sprint-3.md |
 
-Con 3 integrantes se juntan los seis roles sugeridos (coordinación y repositorio; máquinas virtuales y red; seguridad y usuarios; scripts y procesos; Docker; sitio web y videos). Con 1 o 2 integrantes también se juntan.
+Con solo 2 integrantes se juntan los seis roles sugeridos (coordinación y repositorio; máquinas virtuales y red; seguridad y usuarios; scripts y procesos; Docker; sitio web y videos). Por esa razon se decidio en la 3 parte que ambos la realicemos para que nadie tenga una sobrecarga de trabajo
 
 ## Fechas de los sprints
 
