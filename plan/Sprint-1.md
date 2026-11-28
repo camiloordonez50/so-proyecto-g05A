@@ -335,6 +335,8 @@ Para finalizar el Sprint 1, verificamos que estén incluidos los siguientes elem
 ---
 
 *Grupo:* 05A  
+*Miembros:* Yur Brainer Montenegro Villada - 2560738-2724 y Juan Camilo Ordoñez Castro 2560864-2724
 *Proyecto:* Sprint 1 – Montaje  
 *Distribuciones:* Zorin OS 17.3 Core y Fedora Server 44  
 *Código del grupo:* YD05-QZNX
+
